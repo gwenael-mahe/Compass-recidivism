@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("src/compas-scores-raw.csv")
 
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 df['Ethnic_Code_Text'] = df['Ethnic_Code_Text'].replace('African-Am', 'African-American')
 
 st.subheader("Bar Chart: Counts by Ethnicity and Score Text")
